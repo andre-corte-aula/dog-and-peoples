@@ -23,6 +23,7 @@
 - A regra de negócio ficou na application
 - Validar os campos Nome, Raça e Nome do dono, como obrigatório
 - Criado o filtro por nome do cão e raça, porém o filtro final ficou direto na tela usando o DataTable
+- Criado o CRUD - Listar, Obter, Adicionar, Remover e Atualizar dados
 
 # Domain
 - Definido as entidades
