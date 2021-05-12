@@ -34,7 +34,7 @@ namespace DogAndPeoples.Application.Services
             {
                 vs.Add("Nome do dono");
             }
-            if (string.IsNullOrWhiteSpace(donos.NomeDono))
+            if (string.IsNullOrWhiteSpace(donos.Raca))
             {
                 vs.Add("Raça");
             }
@@ -85,7 +85,7 @@ namespace DogAndPeoples.Application.Services
             {
                 vs.Add("Nome do dono");
             }
-            if (string.IsNullOrWhiteSpace(donos.NomeDono))
+            if (string.IsNullOrWhiteSpace(donos.Raca))
             {
                 vs.Add("Raça");
             }

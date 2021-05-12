@@ -18,6 +18,7 @@
 
 # Web
 - Website/Administrativo para gerenciar os cadastros de cães e seus devidos donos
+- Utilizado o Bootstrap para o front-end / layout
 
 # Application
 - A regra de negócio ficou na application

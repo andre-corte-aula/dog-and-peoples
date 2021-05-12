@@ -28,6 +28,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03.3 - Scripts", "03.3 - Sc
 		ScriptBanco.txt = ScriptBanco.txt
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ArtefatoEntrega", "ArtefatoEntrega", "{5C6D9A2B-17EB-4955-A827-E6EF119B6014}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
