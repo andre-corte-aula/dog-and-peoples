@@ -1,0 +1,41 @@
+﻿@using DogAndPeoples.Domain.ViewModels
+@model CaesViewModel
+@{
+    ViewBag.Title = "Editar meu cão";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@if (TempData["sucesso"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["sucesso"]
+    </div>
+}
+@if (TempData["error"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["error"]
+    </div>
+}
+
+<form method="post" action="@Url.Action("edit", "caesdonos")">
+    @Html.AntiForgeryToken()
+    <input type="hidden" id="Id" name="Id" value="@Model.Id" />
+    <input type="hidden" id="IdDono" name="IdDono" value="@Model.IdDono" />
+
+    <div class="form-group">
+        <label for="exampleInputEmail1">Nome do dono</label>
+        <input type="text" class="form-control" id="NomeDono" name="NomeDono" value="@Model.NomeDono" required placeholder="Digite o nome do dono">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Nome cão</label>
+        <input type="text" class="form-control" id="Nome" name="Nome" value="@Model.Nome" required placeholder="Digite o nome do cão">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Raça</label>
+        <input type="text" class="form-control" id="Raca" name="Raca" value="@Model.Raca" required placeholder="Digite a raça do cão">
+    </div>
+    <button type="submit" class="btn btn-success">Salvar meu cão</button>
+    <a href="@Url.Action("index", "caesdonos")" class="btn btn-warning">Voltar</a>
+</form>

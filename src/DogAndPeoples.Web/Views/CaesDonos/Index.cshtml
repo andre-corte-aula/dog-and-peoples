@@ -1,0 +1,38 @@
+﻿@using DogAndPeoples.Domain.ViewModels
+@model IEnumerable<CaesViewModel>
+@{
+    ViewBag.Title = "Relatório de caes";
+}
+
+<h2>Meus Cães</h2>
+<hr />
+@if (TempData["sucesso"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["sucesso"]
+    </div>
+}
+<table id="table_id" class="display">
+    <thead>
+        <tr>
+            <th class="text-center">Ação</th>
+            <th class="text-center">Nome do cão</th>
+            <th class="text-center">Raça</th>
+            <th class="text-center">Nome do dono</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr class="text-center">
+                <td>
+                    <a class="btn btn-info btn-sm" href="@Url.Action("edit", "caesdonos", new { id = item.Id })">Editar</a>
+                    <a class="btn btn-danger btn-sm" href="@Url.Action("remove", "caesdonos", new { idCao = item.Id, idDono = item.IdDono })">Excluir</a>
+                </td>
+                <td>@item.Nome</td>
+                <td>@item.Raca</td>
+                <td>@item.NomeDono</td>
+            </tr>
+        }
+    </tbody>
+</table>
